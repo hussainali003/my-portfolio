@@ -1,5 +1,11 @@
+import Header from "./components/Header";
+
 function App() {
-  return <div className="text-3xl font-bold underline">helll</div>;
+  return (
+    <div className="flex flex-col flex-1">
+      <Header />
+    </div>
+  );
 }
 
 export default App;

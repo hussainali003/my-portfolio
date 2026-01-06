@@ -4,17 +4,14 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  
   font-size: 18;
-
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 }
 
-body {
-  margin: 0;
+html, body, #root {
   height: 100%;
   width: 100%;
   display: flex;
+  background-color: #242424;
 }
 
