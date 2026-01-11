@@ -3,59 +3,46 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
-  
-  font-size: 18;
 }
 
 html, body, #root {
   height: 100%;
   width: 100%;
   display: flex;
-  background-color: #000000;
 }
 
 @keyframes float-top {
   0% {
-    opacity: 0.1;
     transform: translate(0, 0);
   }
   50% {
-    opacity: 0.3;
     transform: translate(0, -150px);
   }
   100% {
-    opacity: 0.1;
     transform: translate(0, 0);
   }
 }
 
 @keyframes float-bottom {
   0% {
-    opacity: 0.1;
     transform: translate(0, 0);
   }
   50% {
-    opacity: 0.3;
     transform: translate(-150px, 100px);
   }
   100% {
-    opacity: 0.1;
     transform: translate(0, 0);
   }
 }
 
 @keyframes float-right {
   0% {
-    opacity: 0.1;
     transform: translate(0, 0);
   }
   50% {
-    opacity: 0.3;
     transform: translate(150px, 100px);
   }
   100% {
-    opacity: 0.1;
     transform: translate(0, 0);
   }
 }

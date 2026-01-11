@@ -4,11 +4,11 @@ function Header() {
   const [active, setActive] = useState<string>(itemList[0]);
 
   return (
-    <div className="fixed top-0 right-0 w-full px-12 py-6">
+    <div className="sticky top-0 right-0 w-full py-3 px-4 sm:px-12 sm:py-6 z-10">
       <div className="flex justify-between">
         <a
           href="#Home"
-          className="font-bold text-xl bg-linear-to-r from-[#a855f7] to-[#6366f1]  bg-clip-text text-transparent"
+          className="hidden sm:block font-bold text-xl bg-linear-to-r from-[#a855f7] to-[#6366f1]  bg-clip-text text-transparent"
         >
           Hussain Ali
         </a>
