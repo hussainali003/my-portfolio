@@ -1,7 +1,7 @@
 function BackgroundContainer() {
   return (
-    <div className="absolute h-full w-full bg-[#000000] -z-11">
-      <div className="absolute inset-0 h-full w-full bg-[linear-gradient(to_right,#96969612_1px,transparent_1px),linear-gradient(to_bottom,#96969612_1px,transparent_1px)] sm:bg-[linear-gradient(to_right,#aaaaaa1_1px,transparent_1px),linear-gradient(to_bottom,#aaaaaa1_1px,transparent_1px)] bg-size-[24px_24px] -z-10"></div>
+    <div className="fixed inset-0 bg-[#000000] -z-11">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#96969612_1px,transparent_1px),linear-gradient(to_bottom,#96969612_1px,transparent_1px)] sm:bg-[linear-gradient(to_right,#aaaaaa1_1px,transparent_1px),linear-gradient(to_bottom,#aaaaaa1_1px,transparent_1px)] bg-size-[24px_24px] -z-10"></div>
 
       {/* for web desktop */}
       <div className="hidden sm:block fixed top-0 left-0 w-[20%] aspect-square bg-[#ad2ac1] opacity-30 rounded-full blur-[150px] -z-9"></div>

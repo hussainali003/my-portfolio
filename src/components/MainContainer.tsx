@@ -2,7 +2,10 @@ import { CiMail, CiShare1 } from "react-icons/ci";
 
 function MainContainer() {
   return (
-    <div className="flex flex-col flex-1 justify-center sm:items-center gap-4 px-4">
+    <div
+      id="Home"
+      className="min-h-screen flex flex-col flex-1 justify-center sm:items-center gap-4 px-4"
+    >
       <p className="font-bold text-5xl sm:text-7xl text-white line">Frontend</p>
       <p className="pb-1 font-bold text-5xl sm:text-7xl bg-linear-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent -tracking-tight">
         Developer
