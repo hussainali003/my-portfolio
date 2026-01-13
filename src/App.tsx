@@ -1,5 +1,6 @@
 import AboutSection from "./components/AboutSection";
 import BackgroundContainer from "./components/BackgroundContainer";
+import ContactSection from "./components/ContactSection";
 import Header from "./components/Header";
 import MainContainer from "./components/MainContainer";
 
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <MainContainer />
       <AboutSection />
+      <ContactSection />
     </div>
   );
 }
