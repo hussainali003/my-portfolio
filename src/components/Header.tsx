@@ -1,10 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Header() {
   const [active, setActive] = useState<string>(itemList[0]);
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="sticky top-0 right-0 w-full py-3 px-4 sm:px-12 sm:py-6 z-10">
+    <div className={`sticky top-0 right-0 w-full py-3 px-4 sm:px-12 sm:py-6 z-10
+        transition-colors duration-700
+        ${scrolled ? "bg-black/80 backdrop-blur-md" : "bg-transparent"}
+      `}>
       <div className="flex justify-between">
         <a
           href="#Home"
