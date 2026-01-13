@@ -15,6 +15,7 @@ function ContactSection() {
             </div>
             {contactList.map((item) => (
               <a
+                target="_blank"
                 href={item.href}
                 key={item.id}
                 className="flex flex-1 items-center gap-3 p-3 rounded-xl border border-white/30 bg-white/20 cursor-pointer group"
