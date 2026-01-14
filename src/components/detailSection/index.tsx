@@ -4,6 +4,8 @@ import { LiaCubesSolid } from "react-icons/lia";
 import { MdCode } from "react-icons/md";
 import { SlBadge } from "react-icons/sl";
 
+import Certificate from "./Certificate";
+
 export default function DetailSection() {
   const [activebutton, setActiveButton] = useState("Projects");
 
@@ -18,7 +20,7 @@ export default function DetailSection() {
           represents a milestone in my continuous learning path.
         </p>
       </div>
-      <div className="flex flex-1 gap-4 sm:mx-24 my-6 px-5 py-3 rounded-2xl border border-white/20">
+      <div className="flex flex-1 gap-4 md:mx-24 my-6 px-5 py-3 rounded-2xl border border-white/20">
         {buttonList.map((item) => (
           <button
             key={item.id}
@@ -31,6 +33,7 @@ export default function DetailSection() {
           </button>
         ))}
       </div>
+      <Certificate />
     </div>
   );
 }
