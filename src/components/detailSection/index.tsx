@@ -5,6 +5,7 @@ import { MdCode } from "react-icons/md";
 import { SlBadge } from "react-icons/sl";
 
 import Certificate from "./Certificate";
+import Projects from "./Projects";
 import Skills from "./Skills";
 
 export default function DetailSection() {
@@ -38,6 +39,7 @@ export default function DetailSection() {
       </div>
       {activebutton === "Certificates" && <Certificate />}
       {activebutton === "Skills" && <Skills />}
+      {activebutton === "Projects" && <Projects />}
     </div>
   );
 }
