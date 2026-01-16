@@ -18,9 +18,8 @@ export default function Skills() {
       {skills.map((item) => (
         <div
           key={item.id}
-          className="relative flex grow sm:grow-0 basis-37.5 flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-[#191737]/70 cursor-pointer transition-transform duration-500 hover:scale-110 group"
+          className="flex grow sm:grow-0 basis-37.5 flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-[#191737]/70 cursor-pointer transition-transform duration-500 hover:scale-110 group"
         >
-          <div className="invisible absolute top-3 w-[45%] aspect-square bg-linear-to-r from-[#a855f7] to-[#6366f1] rounded-full blur-xl group-hover:visible" />
           {item.icon}
           <p className="font-bold text-base text-white truncate z-3">{item.name}</p>
         </div>
