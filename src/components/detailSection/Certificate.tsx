@@ -30,11 +30,7 @@ export default function Certificate() {
   return (
     <div className="flex flex-col lg:flex-row flex-1 gap-4 md:mx-28">
       {certificateList.map((item) => (
-        <button
-          key={item.id}
-          type="button"
-          className="flex-1 rounded-2xl p-6 bg-[#191737] cursor-pointer"
-        >
+        <div key={item.id} className="flex-1 rounded-2xl p-6 bg-[#191737] cursor-pointer">
           <button
             type="button"
             disabled={!isButtonDisabled}
@@ -49,7 +45,7 @@ export default function Certificate() {
             </div>
             <img src={item.img} className="opacity-75" alt={item.alt} />
           </button>
-        </button>
+        </div>
       ))}
       <Modal
         ariaHideApp={false}

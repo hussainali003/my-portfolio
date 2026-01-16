@@ -5,13 +5,14 @@ import { MdCode } from "react-icons/md";
 import { SlBadge } from "react-icons/sl";
 
 import Certificate from "./Certificate";
+import Skills from "./Skills";
 
 export default function DetailSection() {
   const [activebutton, setActiveButton] = useState("Projects");
 
   return (
     <div id="Portfolio" className="pt-40 flex flex-1 flex-col gap-4 px-4">
-      <h1 className="font-bold text-center text-4xl sm:text-5xl bg-linear-to-r from-[#a855f7] to-[#6366f1]  bg-clip-text text-transparent">
+      <h1 className="font-bold text-center text-4xl sm:text-5xl bg-linear-to-r from-[#6366f1]/10 to-[#6366f1]  bg-clip-text text-transparent">
         Portfolio Showcase
       </h1>
       <div className="sm:w-[50%] mx-auto">
@@ -33,7 +34,8 @@ export default function DetailSection() {
           </button>
         ))}
       </div>
-      <Certificate />
+      {activebutton === "Certificates" && <Certificate />}
+      {activebutton === "Skills" && <Skills />}
     </div>
   );
 }
@@ -50,8 +52,8 @@ const buttonList = [
     icon: <SlBadge />,
   },
   {
-    id: 1,
-    name: "Tech Stack",
+    id: 3,
+    name: "Skills",
     icon: <LiaCubesSolid />,
   },
 ];
