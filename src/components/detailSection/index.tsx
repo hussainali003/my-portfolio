@@ -27,7 +27,9 @@ export default function DetailSection() {
             key={item.id}
             type="button"
             onClick={() => setActiveButton(item.name)}
-            className={`flex flex-col flex-1 items-center justify-center gap-1 py-4 sm:py-6 text-lg sm:text-2xl text-white rounded-2xl ${activebutton === item.name && "bg-[#191737] text-[#a855f7]!"} cursor-pointer ${activebutton !== item.name && "hover:bg-[#191737]/50"} transition-transform duration-300 hover:-translate-y-1.25`}
+            className={`flex flex-col flex-1 items-center justify-center gap-1 py-4 sm:py-6 text-lg sm:text-2xl text-white rounded-2xl 
+              ${activebutton === item.name && "bg-[#191737] text-[#a855f7]!"} cursor-pointer 
+              ${activebutton !== item.name && "hover:bg-[#191737]/50"} transition-all duration-500 hover:-translate-y-1.25`}
           >
             {item.icon}
             <p className="text-white sm:font-bold text-sm sm:text-lg">{item.name}</p>

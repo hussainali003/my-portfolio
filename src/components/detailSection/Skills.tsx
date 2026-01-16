@@ -1,14 +1,24 @@
+import { useEffect, useState } from "react";
 import { FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiExpress, SiTypescript } from "react-icons/si";
 
 export default function Skills() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(true);
+  }, []);
+
   return (
-    <div className="flex flex-wrap flex-1 gap-4 sm:mx-24 justify-center">
+    <div
+      className={`flex flex-wrap flex-1 gap-4 sm:mx-24 justify-center transition-all duration-1000 
+        ${visible ? "translate-y-0 opacity-100" : "translate-y-40 opacity-0"}`}
+    >
       {skills.map((item) => (
         <div
           key={item.id}
-          className="relative flex grow sm:grow-0 basis-37.5 flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-[#191737]/70 cursor-pointer transition-transform duration-300 hover:scale-110 group"
+          className="relative flex grow sm:grow-0 basis-37.5 flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-[#191737]/70 cursor-pointer transition-transform duration-500 hover:scale-110 group"
         >
           <div className="invisible absolute top-3 w-[45%] aspect-square bg-linear-to-r from-[#a855f7] to-[#6366f1] rounded-full blur-xl group-hover:visible" />
           {item.icon}

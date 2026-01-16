@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { MdOutlineZoomOutMap } from "react-icons/md";
 
@@ -9,6 +9,7 @@ import responsiveDesignCertificate from "../../assets/images/responsiveDesignCer
 
 export default function Certificate() {
   const [isOpen, setIsOpen] = useState(false);
+  const [visible, setVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState(certificateList[0]);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
@@ -22,13 +23,19 @@ export default function Certificate() {
     return () => window.removeEventListener("resize", checkSize);
   }, []);
 
+  useEffect(() => {
+    setVisible(true);
+  }, []);
+
   const handleClick = (img: { id: number; img: string; alt: string }) => {
     setSelectedImage(img);
     setIsOpen(true);
   };
 
   return (
-    <div className="flex flex-col lg:flex-row flex-1 gap-4 md:mx-28">
+    <div
+      className={`flex flex-col lg:flex-row flex-1 gap-4 md:mx-28 transition-all duration-1000 ${visible ? "translate-y-0 opacity-100" : "translate-y-40 opacity-0"}`}
+    >
       {certificateList.map((item) => (
         <div key={item.id} className="flex-1 rounded-2xl p-6 bg-[#191737] cursor-pointer">
           <button
