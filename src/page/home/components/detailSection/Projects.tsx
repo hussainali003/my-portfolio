@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
 import progressTracker from "../../../../assets/images/progressTracker.png";
 
 export default function Projects() {
+  const navigate = useNavigate();
+
   const [visible, setVisible] = useState(false);
+
+  const handleNavigate = (name: string) => {
+    navigate(`/project/${name}`);
+  };
 
   useEffect(() => {
     setVisible(true);
@@ -34,6 +41,7 @@ export default function Projects() {
           </h3>
           <p className="text-gray-300/80 text-xs sm:text-sm">{item.description}</p>
           <button
+            onClick={() => handleNavigate(item.name)}
             type="button"
             className="self-end flex items-center gap-1.5 sm:gap-2 text-white rounded-sm px-3 py-1 cursor-pointer transition-color duration-500 bg-white/10 hover:bg-white/30"
           >
@@ -51,7 +59,7 @@ const projectList = [
     id: 1,
     img: progressTracker,
     alt: "",
-    name: "Progress Tracker",
+    name: "Progress-Tracker",
     description: "Track you daily progress and make a habit for a life time.",
   },
   {
