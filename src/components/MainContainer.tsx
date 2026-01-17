@@ -30,7 +30,7 @@ function MainContainer() {
       </div>
       <div className="flex gap-4">
         <a
-          href="#Project"
+          href="#Portfolio"
           className="w-30 sm:w-40 h-9 sm:h-11 flex items-center justify-center gap-2 text-sm text-gray-200 font-medium bg-[#030014] rounded-lg border border-white/10
             drop-shadow-[0_0_0.4em_#4f52c9] hover:drop-shadow-[0_0_0.7em_#8633C5] transition-[filter] duration-700 linear group
           "

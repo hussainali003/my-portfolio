@@ -24,13 +24,13 @@ export default function AboutSection() {
           <GrDocumentText />
           Download CV
         </button>
-        <button
-          type="button"
+        <a
+          href="#Portfolio"
           className="w-full flex items-center justify-center gap-1 sm:w-auto  px-3 py-2 font-medium text-[#a855f7] rounded-lg border border-[#a855f7]/50  transition-all duration-300 hover:scale-105 cursor-pointer"
         >
           <MdCode className="text-lg" />
           View Projects
-        </button>
+        </a>
       </div>
       <div className="flex flex-col sm:flex-row flex-1 sm:items-center sm:justify-center gap-4">
         {cardList.map((item) => (
