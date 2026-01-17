@@ -1,22 +1,14 @@
-import AboutSection from "./components/AboutSection";
-import BackgroundContainer from "./components/BackgroundContainer";
-import ContactSection from "./components/ContactSection";
-import DetailSection from "./components/detailSection";
-import FooterSection from "./components/FooterSection";
-import Header from "./components/Header";
-import MainContainer from "./components/MainContainer";
+import { Route, BrowserRouter as Router, Routes } from "react-router";
+
+import Home from "./page/home";
 
 function App() {
   return (
-    <div className="h-min-full w-full">
-      <BackgroundContainer />
-      <Header />
-      <MainContainer />
-      <AboutSection />
-      <DetailSection />
-      <ContactSection />
-      <FooterSection />
-    </div>
+    <Router>
+      <Routes>
+        <Route index path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 

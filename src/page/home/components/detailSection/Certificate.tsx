@@ -4,8 +4,8 @@ import { MdOutlineZoomOutMap } from "react-icons/md";
 
 import Modal from "react-modal";
 
-import javascriptCertificate from "../../assets/images/javascriptCertificate.png";
-import responsiveDesignCertificate from "../../assets/images/responsiveDesignCertificate.png";
+import javascriptCertificate from "../../../../assets/images/javascriptCertificate.png";
+import responsiveDesignCertificate from "../../../../assets/images/responsiveDesignCertificate.png";
 
 export default function Certificate() {
   const [isOpen, setIsOpen] = useState(false);

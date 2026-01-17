@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
-import progressTracker from "../../assets/images/progressTracker.png";
+import progressTracker from "../../../../assets/images/progressTracker.png";
 
 export default function Projects() {
   const [visible, setVisible] = useState(false);
