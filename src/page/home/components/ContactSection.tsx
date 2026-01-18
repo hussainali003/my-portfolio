@@ -11,14 +11,14 @@ function ContactSection() {
           <div className="flex lg:flex-1/2 flex-col gap-3.5 p-6 rounded-2xl text-white bg-white/20">
             <div className="flex items-center gap-2 px-2 mb-2">
               <div className="h-1 w-8 rounded-full bg-linear-to-r from-[#a855f7] to-[#6366f1] "></div>
-              <h1 className="font-medium text-xl text-white">Connect with me</h1>
+              <h1 className="font-medium text-base sm:text-xl text-white">Connect with me</h1>
             </div>
             {contactList.map((item) => (
               <a
                 target="_blank"
                 href={item.href}
                 key={item.id}
-                className="flex flex-1 items-center gap-3 p-3 rounded-xl border border-white/30 bg-white/20 cursor-pointer group"
+                className="flex flex-1 items-center gap-3 p-2 sm:p-3 rounded-xl border border-white/30 bg-white/20 cursor-pointer group"
               >
                 <div
                   className={`p-3 rounded-sm ${item.color} transition-all duration-300 group-hover:scale-110`}
@@ -26,7 +26,7 @@ function ContactSection() {
                   {item.icon}
                 </div>
                 <div>
-                  <h1 className="text-start font-bold text-lg">{item.title}</h1>
+                  <h1 className="text-start font-bold text-base sm:text-lg">{item.title}</h1>
                   <h4 className="text-start text-sm text-gray-400">{item.description}</h4>
                 </div>
               </a>
@@ -43,7 +43,7 @@ const contactList = [
     id: 1,
     title: "Let's Connect",
     description: "on Linkedin",
-    icon: <FaLinkedinIn className="text-xl text-cyan-500" />,
+    icon: <FaLinkedinIn className="text-lg sm:text-xl text-cyan-500" />,
     href: "https://www.linkedin.com/in/hussain-ali-755120295/",
     color: "bg-cyan-500/15",
   },
@@ -51,7 +51,7 @@ const contactList = [
     id: 2,
     title: "Github",
     description: "@hussainali003",
-    icon: <FaGithub className="text-xl" />,
+    icon: <FaGithub className="text-lg sm:text-xl" />,
     href: "https://github.com/hussainali003",
     color: "bg-white/15",
   },
@@ -59,7 +59,7 @@ const contactList = [
     id: 3,
     title: "Facebook",
     description: "@Hussain Ali",
-    icon: <FaFacebookF className="text-xl text-blue-400" />,
+    icon: <FaFacebookF className="text-lg sm:text-xl text-blue-400" />,
     href: "https://www.facebook.com/profile.php?id=100028481423294",
     color: "bg-blue-400/15",
   },
