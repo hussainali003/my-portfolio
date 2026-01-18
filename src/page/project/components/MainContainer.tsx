@@ -33,22 +33,22 @@ export default function MainContainer() {
           conversations.
         </h3>
         <div className="flex flex-1 gap-3 p-4 my-6 rounded-xl bg-white/3">
-          <div className="flex flex-1 items-center gap-2 px-3 py-3 rounded-xl border border-blue-300/30 bg-white/6 transition-all duration-300 hover:scale-101 hover:border-blue-300">
-            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-300/10">
+          <div className="flex flex-1 items-center gap-2 p-2 sm:p-3 rounded-xl border border-blue-300/30 bg-white/6 transition-all duration-300 hover:scale-101 hover:border-blue-300">
+            <div className="flex items-center justify-center  size-7 sm:size-10 rounded-full bg-blue-300/10">
               <FaCode className="text-blue-300" />
             </div>
             <div>
               <h3 className="text-base text-blue-300/70">5</h3>
-              <h5 className="text-xs text-gray-400">Total Technologies</h5>
+              <h5 className="text-xs text-gray-400 truncate">Total Technologies</h5>
             </div>
           </div>
-          <div className="flex flex-1 items-center gap-2 px-3 py-3 rounded-xl border border-purple-700/30 bg-white/6 transition-all duration-300 hover:scale-101 hover:border-purple-700">
-            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-purple-700/10">
+          <div className="flex flex-1 items-center gap-2 p-2 sm:p-3 rounded-xl border border-purple-700/30 bg-white/6 transition-all duration-300 hover:scale-101 hover:border-purple-700">
+            <div className="flex items-center justify-center  size-7 sm:size-10 rounded-full bg-purple-700/10">
               <BsStack className="text-purple-700" />
             </div>
             <div>
               <h3 className="text-base text-purple-700/80">6</h3>
-              <h5 className="text-xs text-gray-400">Key Features</h5>
+              <h5 className="text-xs text-gray-400 truncate">Key Features</h5>
             </div>
           </div>
         </div>
