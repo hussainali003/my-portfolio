@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router";
 
+import joyed from "../../../../assets/images/joyed.png";
+import polygrid from "../../../../assets/images/polygrid.png";
 import progressTracker from "../../../../assets/images/progressTracker.png";
 
 export default function Projects() {
@@ -32,7 +34,7 @@ export default function Projects() {
           <div className="flex-1 rounded-lg overflow-hidden">
             <img
               src={item.img}
-              className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full transition-transform duration-500 group-hover:scale-105"
               alt={item.alt}
             />
           </div>
@@ -64,14 +66,14 @@ const projectList = [
   },
   {
     id: 2,
-    img: progressTracker,
+    img: polygrid,
     alt: "",
     name: "Polygrid",
-    description: "Talk to others about politics and choose the best candidate for election.",
+    description: "Talk to current affairs of state and post your ideas about it.",
   },
   {
     id: 3,
-    img: progressTracker,
+    img: joyed,
     alt: "",
     name: "Joyed",
     description:

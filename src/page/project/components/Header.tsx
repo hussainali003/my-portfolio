@@ -10,7 +10,7 @@ export default function Header() {
   };
 
   return (
-    <div className="flex mx-4 my-4 sm:my-12 sm:mx-12 self-start items-center gap-4">
+    <div className="flex mx-4 my-4 sm:my-12 2xl:mx-42 self-start items-center gap-4">
       <button
         type="button"
         onClick={handleGoBack}
