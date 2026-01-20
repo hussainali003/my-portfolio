@@ -9,7 +9,7 @@ function ContactSection() {
     <div
       id="Contact"
       ref={ref}
-      className={`flex flex-1 flex-col gap-12 pt-10 sm:pt-20 transition-all duration-3000
+      className={`flex flex-1 flex-col gap-12 pt-10 sm:pt-20 transition-all duration-1500
         ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-40"}
     `}
     >

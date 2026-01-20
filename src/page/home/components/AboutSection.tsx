@@ -12,7 +12,7 @@ export default function AboutSection() {
     <div
       id="About"
       ref={ref}
-      className={`flex flex-1 flex-col gap-8  px-4 pb-6 sm:pb-20 transition-all duration-3000
+      className={`flex flex-1 flex-col gap-8 pt-14 -mt-10 px-4 pb-6 sm:pb-20 transition-all duration-1500
         ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-40"}
       `}
     >

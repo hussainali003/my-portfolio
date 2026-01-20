@@ -18,7 +18,7 @@ export default function DetailSection() {
     <div
       ref={ref}
       id="Portfolio"
-      className={`flex flex-1 flex-col gap-4 pb-10 sm:pb-20 pt-14 sm:pt-20 px-4 transition-all duration-3000
+      className={`flex flex-1 flex-col gap-4 pb-10 sm:pb-20 pt-14 sm:pt-20 px-4 transition-all duration-1500
         ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-40"}
     `}
     >
