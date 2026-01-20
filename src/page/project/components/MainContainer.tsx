@@ -1,10 +1,9 @@
+import { useEffect } from "react";
 import { BsStack } from "react-icons/bs";
 import { CiStar } from "react-icons/ci";
 import { FaCode } from "react-icons/fa";
 import { IoCubeOutline } from "react-icons/io5";
-
 import { useParams } from "react-router";
-
 import joyed from "../../../assets/images/joyed.png";
 import polygrid from "../../../assets/images/polygrid.png";
 import progressTracker from "../../../assets/images/progressTracker.png";
@@ -12,6 +11,10 @@ import progressTracker from "../../../assets/images/progressTracker.png";
 export default function MainContainer() {
   const { name } = useParams();
   let data = null;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (name === "Progress-Tracker") {
     data = projectDataList[0];
@@ -38,7 +41,7 @@ export default function MainContainer() {
               <FaCode className="text-blue-300" />
             </div>
             <div>
-              <h3 className="text-base text-blue-300/70">5</h3>
+              <h3 className="text-base text-blue-300/70">{data?.technologies}</h3>
               <h5 className="text-xs text-gray-400 truncate">Total Technologies</h5>
             </div>
           </div>
@@ -47,7 +50,7 @@ export default function MainContainer() {
               <BsStack className="text-purple-700" />
             </div>
             <div>
-              <h3 className="text-base text-purple-700/80">6</h3>
+              <h3 className="text-base text-purple-700/80">{data?.features}</h3>
               <h5 className="text-xs text-gray-400 truncate">Key Features</h5>
             </div>
           </div>

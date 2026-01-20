@@ -5,7 +5,7 @@ import MainContainer from "./components/MainContainer";
 
 export default function Project() {
   return (
-    <div className="min-h-full w-full">
+    <div className="h-full w-full">
       <BackgroundContainer />
       <div className="flex flex-col flex-1">
         <Header />
