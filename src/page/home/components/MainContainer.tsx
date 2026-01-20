@@ -1,10 +1,16 @@
 import { CiMail, CiShare1 } from "react-icons/ci";
+import { useInViewAnimation } from "../../../hooks/useInViewAnimation";
 
 function MainContainer() {
+  const { ref, visible } = useInViewAnimation();
+
   return (
     <div
+      ref={ref}
       id="Home"
-      className="min-h-screen flex flex-col flex-1 justify-center sm:items-center gap-4 px-4"
+      className={`min-h-screen flex flex-col flex-1 justify-center sm:items-center gap-4 px-4 transition-all duration-1500
+        ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-40"}
+      `}
     >
       <p className="font-bold text-5xl sm:text-7xl text-white line">Frontend</p>
       <p className="pb-1 font-bold text-5xl sm:text-7xl bg-linear-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent -tracking-tight">

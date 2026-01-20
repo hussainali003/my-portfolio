@@ -3,9 +3,19 @@ import { GrDocumentText } from "react-icons/gr";
 import { MdCode } from "react-icons/md";
 import { SlBadge } from "react-icons/sl";
 
+import { useInViewAnimation } from "../../../hooks/useInViewAnimation";
+
 export default function AboutSection() {
+  const { ref, visible } = useInViewAnimation();
+
   return (
-    <div id="About" className="pt-20 flex flex-1 flex-col gap-8 px-4">
+    <div
+      id="About"
+      ref={ref}
+      className={`flex flex-1 flex-col gap-8  px-4 pb-6 sm:pb-20 transition-all duration-3000
+        ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-40"}
+      `}
+    >
       <h1 className="font-bold text-center text-4xl sm:text-5xl bg-linear-to-r from-[#a855f7] to-[#6366f1]  bg-clip-text text-transparent">
         About Me
       </h1>

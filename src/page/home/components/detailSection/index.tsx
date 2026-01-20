@@ -4,15 +4,24 @@ import { LiaCubesSolid } from "react-icons/lia";
 import { MdCode } from "react-icons/md";
 import { SlBadge } from "react-icons/sl";
 
+import { useInViewAnimation } from "../../../../hooks/useInViewAnimation";
+
 import Certificate from "./Certificate";
 import Projects from "./Projects";
 import Skills from "./Skills";
 
 export default function DetailSection() {
   const [activebutton, setActiveButton] = useState("Projects");
+  const { ref, visible } = useInViewAnimation();
 
   return (
-    <div id="Portfolio" className="pt-40 flex flex-1 flex-col gap-4 px-4">
+    <div
+      ref={ref}
+      id="Portfolio"
+      className={`flex flex-1 flex-col gap-4 pb-10 sm:pb-20 pt-14 sm:pt-20 px-4 transition-all duration-3000
+        ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-40"}
+    `}
+    >
       <h1 className="font-bold text-center text-4xl sm:text-5xl bg-linear-to-r from-[#a855f7] to-[#6366f1]  bg-clip-text text-transparent">
         Portfolio Showcase
       </h1>

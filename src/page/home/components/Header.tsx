@@ -15,10 +15,12 @@ function Header() {
   }, []);
 
   return (
-    <div className={`sticky top-0 right-0 w-full py-3 px-4 sm:px-12 sm:py-6 z-10
+    <div
+      className={`fixed top-0 right-0 w-full py-3 px-4 sm:px-12 sm:py-6 z-10
         transition-colors duration-700
         ${scrolled ? "bg-black/80 backdrop-blur-md" : "bg-transparent"}
-      `}>
+      `}
+    >
       <div className="flex justify-between">
         <a
           href="#Home"

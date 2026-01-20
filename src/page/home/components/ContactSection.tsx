@@ -1,8 +1,18 @@
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
+import { useInViewAnimation } from "../../../hooks/useInViewAnimation";
+
 function ContactSection() {
+  const { ref, visible } = useInViewAnimation();
+
   return (
-    <div id="Contact" className="flex flex-1 flex-col gap-12 pt-20">
+    <div
+      id="Contact"
+      ref={ref}
+      className={`flex flex-1 flex-col gap-12 pt-10 sm:pt-20 transition-all duration-3000
+        ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-40"}
+    `}
+    >
       <h1 className="font-bold text-center text-4xl sm:text-5xl bg-linear-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent">
         Contact Me
       </h1>
