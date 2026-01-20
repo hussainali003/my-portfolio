@@ -60,7 +60,7 @@ export default function MainContainer() {
           {data?.technologiesList.map((item, index) => (
             <div
               key={`${item[0]} ${index}`}
-              className="flex items-center justify-center gap-1 px-4 py-2.5 text-blue-300/70 rounded-xl border border-blue-500/10 bg-linear-to-r from-blue-600/10 to-purple-600/10 hover:from-blue-600/15 hover:to-purple-600/15 hover:border-blue-500/30 cursor-default"
+              className="flex items-center justify-center gap-1 px-4 py-2.5 text-blue-300/70 rounded-xl border border-blue-500/10 bg-linear-to-r from-blue-600/10 to-purple-600/10 transition-all duration-300 hover:scale-102 hover:from-blue-600/15 hover:to-purple-600/15 hover:border-blue-500/30 cursor-default"
             >
               <IoCubeOutline />
               <p className="text-sm">{item}</p>
