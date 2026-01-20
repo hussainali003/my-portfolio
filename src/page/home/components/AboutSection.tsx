@@ -27,13 +27,15 @@ export default function AboutSection() {
         </p>
       </div>
       <div className="flex flex-1 flex-col sm:flex-row sm:items-center sm:justify-center gap-4">
-        <button
-          type="button"
+        <a
+          href="/cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="w-full flex items-center justify-center gap-1 sm:w-auto px-3 py-2 font-medium text-white rounded-lg bg-linear-to-r from-[#6366f1] to-[#a855f7] transition-all  duration-300 hover:scale-105 cursor-pointer"
         >
           <GrDocumentText />
           Download CV
-        </button>
+        </a>
         <a
           href="#Portfolio"
           className="w-full flex items-center justify-center gap-1 sm:w-auto  px-3 py-2 font-medium text-[#a855f7] rounded-lg border border-[#a855f7]/50  transition-all duration-300 hover:scale-105 cursor-pointer"
