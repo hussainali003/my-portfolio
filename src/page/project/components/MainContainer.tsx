@@ -89,10 +89,10 @@ export default function MainContainer() {
         </div>
       </div>
       <div className="flex flex-col gap-12 flex-1">
-        <div className="flex-1 rounded-2xl border border-gray-700/70 overflow-hidden transition-all duration-300 hover:border-gray-700 group">
+        <div className="w-full aspect-video rounded-2xl border border-gray-700/70 overflow-hidden transition-all duration-300 hover:border-gray-700 group">
           <img
             src={data.image}
-            className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             alt={data.imageAlt}
           />
         </div>
