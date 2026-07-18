@@ -1,17 +1,11 @@
 import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { useNavigate } from "react-router";
+import { Link } from "react-router";
 
 import { projects } from "../../../../data/projects";
 
 export default function Projects() {
-  const navigate = useNavigate();
-
   const [visible, setVisible] = useState(false);
-
-  const handleNavigate = (slug: string) => {
-    navigate(`/project/${slug}`);
-  };
 
   useEffect(() => {
     setVisible(true);
@@ -23,16 +17,18 @@ export default function Projects() {
         ${visible ? "translate-y-0 opacity-100" : "translate-y-40 opacity-0"}`}
     >
       {projects.map((item) => (
-        <div
+        <Link
           key={item.id}
+          to={`/project/${item.slug}`}
           className="flex-1 flex flex-col gap-3 rounded-2xl p-4 border border-white/10
           bg-linear-to-br from-slate-900/90 to-slate-700/90 cursor-pointer
-          transition-all duration-300 hover:border-[#a855f7]/60 group"
+          transition-all duration-300 hover:border-[#a855f7]/60 group
+          focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a855f7]"
         >
-          <div className="flex-1 rounded-lg overflow-hidden">
+          <div className="w-full aspect-video rounded-lg overflow-hidden">
             <img
               src={item.image}
-              className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               alt={item.imageAlt}
             />
           </div>
@@ -48,15 +44,11 @@ export default function Projects() {
             )}
           </div>
           <p className="text-gray-300/80 text-xs sm:text-sm">{item.summary}</p>
-          <button
-            onClick={() => handleNavigate(item.slug)}
-            type="button"
-            className="self-end flex items-center gap-1.5 sm:gap-2 text-white rounded-sm px-3 py-1 cursor-pointer transition-color duration-500 bg-white/10 hover:bg-white/30"
-          >
-            <h3 className="text-xs sm:text-sm">Details</h3>
-            <FaArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
-          </button>
-        </div>
+          <span className="mt-auto self-end flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-white/70 transition-colors duration-300 group-hover:text-white">
+            View Details
+            <FaArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3 transition-transform duration-300 group-hover:translate-x-1" />
+          </span>
+        </Link>
       ))}
     </div>
   );
