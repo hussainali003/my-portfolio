@@ -21,7 +21,7 @@ export default function Projects() {
 
   return (
     <div
-      className={`flex flex-col lg:flex-row flex-1 gap-4 md:mx-28 transition-all duration-1000
+      className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 flex-1 gap-4 md:mx-28 transition-all duration-1000
         ${visible ? "translate-y-0 opacity-100" : "translate-y-40 opacity-0"}`}
     >
       {projectList.map((item) => (
@@ -38,9 +38,17 @@ export default function Projects() {
               alt={item.alt}
             />
           </div>
-          <h3 className="text-base sm:text-xl font-semibold bg-linear-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
-            {item.name}
-          </h3>
+          <div className="flex items-center gap-2">
+            <h3 className="text-base sm:text-xl font-semibold bg-linear-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
+              {item.name}
+            </h3>
+            {item.isLive && (
+              <span className="flex items-center gap-1.5 px-2 py-0.5 text-[10px] uppercase tracking-wide text-emerald-300 rounded-full border border-emerald-400/30 bg-emerald-400/10">
+                <span className="size-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                Live
+              </span>
+            )}
+          </div>
           <p className="text-gray-300/80 text-xs sm:text-sm">{item.description}</p>
           <button
             onClick={() => handleNavigate(item.name)}
@@ -62,6 +70,7 @@ const projectList = [
     img: progressTracker,
     alt: "Progress Tracker",
     name: "Progress-Tracker",
+    isLive: true,
     description:
       "Track your daily habits with streaks, heatmaps and charts in a clean dark dashboard.",
   },
