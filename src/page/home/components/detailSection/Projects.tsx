@@ -3,8 +3,10 @@ import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router";
 
 import joyed from "../../../../assets/images/joyed.png";
+import lense from "../../../../assets/images/lense.png";
 import polygrid from "../../../../assets/images/polygrid.png";
 import progressTracker from "../../../../assets/images/progressTracker.png";
+import sylvasense from "../../../../assets/images/sylvasense.png";
 
 export default function Projects() {
   const navigate = useNavigate();
@@ -40,7 +42,7 @@ export default function Projects() {
           </div>
           <div className="flex items-center gap-2">
             <h3 className="text-base sm:text-xl font-semibold bg-linear-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
-              {item.name}
+              {item.title}
             </h3>
             {item.isLive && (
               <span className="flex items-center gap-1.5 px-2 py-0.5 text-[10px] uppercase tracking-wide text-emerald-300 rounded-full border border-emerald-400/30 bg-emerald-400/10">
@@ -67,25 +69,48 @@ export default function Projects() {
 const projectList = [
   {
     id: 1,
+    img: sylvasense,
+    alt: "SylvaSense forestry survey portal",
+    name: "SylvaSense",
+    title: "SylvaSense",
+    isLive: true,
+    description:
+      "Turn drone forest surveys into stocking analysis and audit-ready reports, with in-browser AI segmentation.",
+  },
+  {
+    id: 2,
+    img: lense,
+    alt: "Lens AI precision agriculture portal",
+    name: "Lens-AI",
+    title: "Lens AI",
+    isLive: true,
+    description:
+      "Turn drone and satellite imagery into field health, plant counts and shareable agronomy reports.",
+  },
+  {
+    id: 3,
     img: progressTracker,
-    alt: "Progress Tracker",
+    alt: "Progress Tracker habit dashboard",
     name: "Progress-Tracker",
+    title: "Progress Tracker",
     isLive: true,
     description:
       "Track your daily habits with streaks, heatmaps and charts in a clean dark dashboard.",
   },
   {
-    id: 2,
+    id: 4,
     img: polygrid,
-    alt: "",
+    alt: "Polygrid social feed app",
     name: "Polygrid",
+    title: "Polygrid",
     description: "Talk to current affairs of state and post your ideas about it.",
   },
   {
-    id: 3,
+    id: 5,
     img: joyed,
-    alt: "",
+    alt: "Joyed activity sharing app",
     name: "Joyed",
+    title: "Joyed",
     description:
       "Share your activities with others and make a new friends for your related activity.",
   },

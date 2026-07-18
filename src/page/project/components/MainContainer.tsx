@@ -5,8 +5,10 @@ import { FaCode, FaExternalLinkAlt } from "react-icons/fa";
 import { IoCubeOutline } from "react-icons/io5";
 import { Link, useParams } from "react-router";
 import joyed from "../../../assets/images/joyed.png";
+import lense from "../../../assets/images/lense.png";
 import polygrid from "../../../assets/images/polygrid.png";
 import progressTracker from "../../../assets/images/progressTracker.png";
+import sylvasense from "../../../assets/images/sylvasense.png";
 
 export default function MainContainer() {
   const { name } = useParams();
@@ -134,6 +136,110 @@ type Project = {
 const projectDataList: Project[] = [
   {
     id: 1,
+    name: "SylvaSense",
+    alt: "SylvaSense — Forestry Survey & Stocking Analysis Portal",
+    image: sylvasense,
+    liveUrl: "https://sylvasense.farmevo.ai",
+    description:
+      "SylvaSense turns drone forest surveys into regeneration and stocking truth — tree counts and compliance status for every block and stratum on one map. Field crews enter plot data in the browser, and audit-ready survey reports come out in minutes instead of manual spreadsheets.",
+    technologiesList: [
+      "React 19",
+      "TypeScript 5.9",
+      "Vite 7",
+      "Tailwind CSS 4",
+      "Redux Toolkit 2",
+      "React-Redux 9",
+      "Redux Persist + IndexedDB",
+      "Apollo Client 4",
+      "GraphQL 16",
+      "GraphQL Code Generator 6",
+      "React Router 7",
+      "OpenLayers 10 (+ ol-ext)",
+      "Turf.js 7",
+      "JSTS",
+      "proj4 + WKT",
+      "GeoTIFF + geoblaze",
+      "Transformers.js 4 (SAM 2, ONNX)",
+      "WebGPU + WASM inference",
+      "Web Workers",
+      "SheetJS / xlsx",
+      "shpjs / shp-write",
+      "togeojson / tokml",
+      "jsPDF 3 + jspdf-autotable",
+      "html2canvas-pro / html2pdf.js",
+      "Recharts 3",
+      "dnd-kit",
+      "Firebase 10 (Auth + FCM)",
+      "Google OAuth + Azure MSAL 5",
+      "Sentry 10",
+      "PostHog",
+      "Headless UI 2 + Heroicons + Lucide",
+      "Axios, Luxon, RxJS, react-window, JSZip",
+    ],
+    featuresList: [
+      "Block & Stratum Mapping – Draw or import forest blocks on the map, then build strata inside them with overlap detection.",
+      "AI Segment Tool – Drag a box and an in-browser SAM 2 model turns the tree crown or boundary into a polygon, on WebGPU with no server round-trip.",
+      "Plot Data Entry – Field crews record species tallies and brush observations directly in the app, no spreadsheet needed.",
+      "Stocking & SPH Analysis – Stems-Per-Hectare, 80% lower confidence limit and compliance against target/minimum SPH are derived from plot tallies.",
+      "Survey Report PDF – Generate a formatted survey report with charts and map snapshots, previewable in-app.",
+      "Excel Import with Template Manager – Auto-detect client spreadsheet formats and build custom column-mapping templates for new ones.",
+      'Tolko LRM XML Export – Export saved surveys to the industry Tolko "TFM" survey XML format for direct client ingestion.',
+      "Flight History & Scout Imagery – Browse past drone flights, scan types and geotagged scout images on a date timeline.",
+    ],
+  },
+  {
+    id: 2,
+    name: "Lens-AI",
+    alt: "Lens AI — Precision Agriculture Intelligence Portal",
+    image: lense,
+    liveUrl: "https://lense.farmevo.ai",
+    description:
+      "Lens AI turns drone and satellite imagery into clear, actionable field insights for farmers — field health, plant count and problem areas in one place. Growers map their farms, upload imagery and get ready-to-share reports in minutes, plus a built-in AI assistant that answers questions about their data.",
+    technologiesList: [
+      "React 19",
+      "TypeScript 5.9",
+      "Vite 7",
+      "Tailwind CSS 4",
+      "Redux Toolkit 2",
+      "React-Redux 9",
+      "Redux Persist + IndexedDB",
+      "Apollo Client 4",
+      "GraphQL 16",
+      "GraphQL Code Generator 6",
+      "React Router 7",
+      "OpenLayers 10 (+ ol-ext)",
+      "Turf.js 7",
+      "proj4",
+      "JSTS",
+      "GeoTIFF + geoblaze",
+      "shpjs / shp-write",
+      "togeojson / tokml",
+      "Firebase 10 (Auth + FCM)",
+      "Google OAuth",
+      "Azure MSAL 5",
+      "Anthropic Claude SDK",
+      "Recharts 3",
+      "jsPDF 3 + jspdf-autotable",
+      "html2canvas / html2pdf.js",
+      "SheetJS (xlsx)",
+      "Sentry 10",
+      "PostHog",
+      "Headless UI 2 + Heroicons + Lucide",
+      "Axios, Luxon, RxJS, react-window, JSZip",
+    ],
+    featuresList: [
+      "Farm & Field Dashboard – Health summary, charts and the latest scan for every farm and field in one dashboard view.",
+      "Interactive Field Mapping – Draw, edit and measure field boundaries on an OpenLayers map with live Turf.js area and geometry calculations.",
+      "Multi-Format Field Import – Import fields from Shapefile, KML/KMZ or GeoJSON, or connect a John Deere Operations Center account.",
+      "Chunked Raw Imagery Upload – Large drone image sets upload chunk-by-chunk in the background with resume and progress tracking.",
+      "Agronomy Report Suite – Generate Scout, Plant Count and Off-Type reports and export them to PDF or Excel.",
+      "AI Field Assistant – A Claude-powered chat that answers natural-language questions about your fields and reports.",
+      "Flight & Data History Explorer – Drill down from farm to field to flight date to images to revisit any past scan.",
+      "Subscription & Billing Flow – In-app pricing plans with checkout success handling.",
+    ],
+  },
+  {
+    id: 3,
     name: "Progress-Tracker",
     liveUrl: "https://progress-tracker-web-ten.vercel.app/",
     description:
@@ -162,7 +268,7 @@ const projectDataList: Project[] = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     name: "Polygrid",
     description: "Talk to current affairs of state and post your ideas about it.",
     technologiesList: ["React Native", "RN Calenders", "RN Screens", "Firebase", "Redux"],
@@ -177,7 +283,7 @@ const projectDataList: Project[] = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     name: "Joyed",
     description:
       "Share your activities with others and make a new friends for your related activity.",
