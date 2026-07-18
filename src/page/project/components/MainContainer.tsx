@@ -31,17 +31,14 @@ export default function MainContainer() {
           {data?.alt}
         </h1>
         <div className="w-28 h-1 my-6 rounded-full bg-linear-to-r from-blue-500 to-purple-500 animate-pulse" />
-        <h3 className="text-base text-white/70">
-          Real-time mock interviews with AI, no forms or clicks just natural, personalized
-          conversations.
-        </h3>
+        <h3 className="text-base text-white/70">{data?.description}</h3>
         <div className="flex flex-1 gap-3 p-4 my-6 rounded-xl bg-white/3">
           <div className="flex flex-1 items-center gap-2 p-2 sm:p-3 rounded-xl border border-blue-300/30 bg-white/6 transition-all duration-300 hover:scale-101 hover:border-blue-300">
             <div className="flex items-center justify-center  size-7 sm:size-10 rounded-full bg-blue-300/10">
               <FaCode className="text-blue-300" />
             </div>
             <div>
-              <h3 className="text-base text-blue-300/70">{data?.technologies}</h3>
+              <h3 className="text-base text-blue-300/70">{data?.technologiesList.length}</h3>
               <h5 className="text-xs text-gray-400 truncate">Total Technologies</h5>
             </div>
           </div>
@@ -50,7 +47,7 @@ export default function MainContainer() {
               <BsStack className="text-purple-700" />
             </div>
             <div>
-              <h3 className="text-base text-purple-700/80">{data?.features}</h3>
+              <h3 className="text-base text-purple-700/80">{data?.featuresList.length}</h3>
               <h5 className="text-xs text-gray-400 truncate">Key Features</h5>
             </div>
           </div>
@@ -105,23 +102,35 @@ const projectDataList = [
   {
     id: 1,
     name: "Progress-Tracker",
-    features: 4,
-    technologies: 6,
-    technologiesList: ["React", "React Router", "Express", "Tailwind", "zustand", "Recharts"],
+    description:
+      "Track your daily habits and hobbies with streaks, heatmaps and charts — a clean dark dashboard that shows your progress at a glance.",
+    technologiesList: [
+      "React 19",
+      "TypeScript",
+      "React Router 7",
+      "Redux Toolkit",
+      "Tailwind CSS 4",
+      "Recharts",
+      "Yup",
+      "Luxon",
+      "Vite (Rolldown)",
+      "Express",
+    ],
     image: progressTracker,
     alt: "Progress Tracker",
     featuresList: [
-      "Dashboard – Simple, interface for your hobbies.",
-      "User Auth – Sign up/sign in via Backend authentication.",
-      "Track – Track your hobby progress.",
-      "Charts – See your progress on multiple charts.",
+      "Habit Dashboard – Create, edit and track all your habits from one dark-themed home screen.",
+      "Habit Detail & Heatmap – Per-habit page with a GitHub-style completion heatmap and derived stats.",
+      "Progress Charts – Visualise streaks and completion trends over time with Recharts.",
+      "Custom Scheduling – Set repeat rules, reminder times, end dates and a colour for every habit.",
+      "Secure Auth – JWT-based register, login, forgot-password and reset-password flows.",
+      "Persistent Sessions – Redux state with an /auth/me re-fetch, so a refresh never logs you out.",
     ],
   },
   {
     id: 2,
     name: "Polygrid",
-    features: 5,
-    technologies: 5,
+    description: "Talk to current affairs of state and post your ideas about it.",
     technologiesList: ["React Native", "RN Calenders", "RN Screens", "Firebase", "Redux"],
     image: polygrid,
     alt: "Polygrid",
@@ -136,8 +145,8 @@ const projectDataList = [
   {
     id: 3,
     name: "Joyed",
-    features: 3,
-    technologies: 6,
+    description:
+      "Share your activities with others and make a new friends for your related activity.",
     technologiesList: ["React Native", "axios", "lodash", "RN Screens", "Firebase", "Redux"],
     image: joyed,
     alt: "Joyed",

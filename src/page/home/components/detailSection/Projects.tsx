@@ -60,9 +60,10 @@ const projectList = [
   {
     id: 1,
     img: progressTracker,
-    alt: "",
+    alt: "Progress Tracker",
     name: "Progress-Tracker",
-    description: "Track you daily progress and make a habit for a life time.",
+    description:
+      "Track your daily habits with streaks, heatmaps and charts in a clean dark dashboard.",
   },
   {
     id: 2,
